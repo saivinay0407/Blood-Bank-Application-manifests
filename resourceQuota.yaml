@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ResourceQuota
 metadata:
   name: bloodbank-quota
-  namespace: bloodbankApp
+  namespace: bloodbankapp
 
 spec:
   hard:
