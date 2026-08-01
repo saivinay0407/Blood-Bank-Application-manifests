@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: db-mystatefulset
+  namespace: bloodbankApp
+spec:
+  serviceName: bloodbank-service
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-database
+  template:
+    metadata:
+      labels:
+        app: app-database
+    spec:
+      containers:
+      - name: app-database
+        image: venkatasaivinay/php:dbImage
+
+        ports:
+          - containerPort: 3306
+
+        envFrom:
+          - secretRef:
+              name: bloodbank-secret
+
+        # resource limits
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "200m"
+            memory: "256Mi"
+
+        volumeMounts:
+          - name: bloodbank-pvc
+            mountPath: /var/lib/mysql
+
