@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
   name: bloodbank-network-policy
-  namespace: bloodbankApp
+  namespace: bloodbankapp
 spec:
   podSelector:
     matchLabels:
