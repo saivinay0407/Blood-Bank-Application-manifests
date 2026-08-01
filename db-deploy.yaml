@@ -36,7 +36,7 @@ spec:
 
         volumeMounts:
           - name: mysql-data
-            mountPath: /usr/share/nginx/html
+            mountPath: /usr/share/nginx/html/
 
   volumeClaimTemplates:
     - metadata:
