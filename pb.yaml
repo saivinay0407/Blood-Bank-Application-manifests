@@ -2,7 +2,7 @@ apiVersion: policy/v1
 kind: PodDisruptionBudget
 metadata:
   name: bankapp-pdb
-  namespace: bloodbankApp
+  namespace: bloodbankapp
 spec:
   minAvailable: 2
   selector:
