@@ -5,5 +5,5 @@ metadata:
   namespace: bloodbankapp
 
 data:
-  DB_HOST: mysqldb
+  DB_HOST: bloodbank-service
   DB_PORT: "3306"
