@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: bloodbank-config
-  namespace: bloodbankApp
+  namespace: bloodbankapp
 
 data:
   DB_HOST: mysqldb
